@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.memorify.musicalstructureapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".LibraryOverviewActivity"
+            android:label="@string/library_overview">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DetailActivity"
+            android:label="@string/album_artist_details" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LibraryOverviewActivity" />
+        </activity>
+        <activity
+            android:name=".PlayerActivity"
+            android:label="@string/now_listening" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LibraryOverviewActivity" />
+        </activity>
+    </application>
+
+</manifest>
